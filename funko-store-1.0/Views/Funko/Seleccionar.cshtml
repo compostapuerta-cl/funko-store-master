@@ -1,0 +1,30 @@
+﻿@model funko_store_1._0.Models.tb_productos
+
+@{
+    ViewBag.Title = "Seleccionar";
+}
+
+<h2>Seleccionar Producto</h2>
+
+<div style="margin-bottom: 20px">
+    @Html.ActionLink("Regresar", "Index")
+
+</div>
+
+@Html.Partial("_PartialRegistro")
+
+@using (Html.BeginForm())
+{
+    <div class="col-xs-2">
+        <label for="cantidad">Cantidad: </label>
+        <input class="form-control" type="number" id="cantidad" name="cantidad" value="1" />
+    </div>
+    <br />
+    <div style="margin-top: 5px">
+        <!--<input type="submit" value="Agregar al carrito" class="btn btn-success" />-->
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart" style="color:white"></span> Agregar al carrito</button>
+    </div>
+    <br />
+}
+
+

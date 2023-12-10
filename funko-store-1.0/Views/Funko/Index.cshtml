@@ -1,0 +1,12 @@
+﻿@model IEnumerable<funko_store_1._0.Models.tb_productos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Catálogo de Productos Funko</h2>
+<div style="margin-bottom: 20px">
+    @Html.ActionLink("Realizar compra", "Comprar")
+</div>
+
+@Html.Partial("_PartialProducto")

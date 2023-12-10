@@ -1,0 +1,55 @@
+﻿@model IEnumerable<funko_store_1._0.Models.tb_pedido>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idpedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecpedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idusu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idpedido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecpedido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idusu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.ActionLink("Ver Detalle", "Detalle", new {  id=item.idpedido }, new { @class = "btn btn-success" })
+        </td>
+    </tr>
+}
+
+</table>

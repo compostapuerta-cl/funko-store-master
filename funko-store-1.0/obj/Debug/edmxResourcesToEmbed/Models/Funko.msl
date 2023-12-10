@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FUNKOBDModelStoreContainer" CdmEntityContainer="FUNKOBDEntities1">
+    <EntitySetMapping Name="tb_categorias">
+      <EntityTypeMapping TypeName="FUNKOBDModel.tb_categorias">
+        <MappingFragment StoreEntitySet="tb_categorias">
+          <ScalarProperty Name="idcate" ColumnName="idcate" />
+          <ScalarProperty Name="nomcate" ColumnName="nomcate" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_productos">
+      <EntityTypeMapping TypeName="FUNKOBDModel.tb_productos">
+        <MappingFragment StoreEntitySet="tb_productos">
+          <ScalarProperty Name="idprodu" ColumnName="idprodu" />
+          <ScalarProperty Name="codbar" ColumnName="codbar" />
+          <ScalarProperty Name="nomprodu" ColumnName="nomprodu" />
+          <ScalarProperty Name="idcate" ColumnName="idcate" />
+          <ScalarProperty Name="entrada" ColumnName="entrada" />
+          <ScalarProperty Name="salida" ColumnName="salida" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="caracte" ColumnName="caracte" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_usuarios">
+      <EntityTypeMapping TypeName="FUNKOBDModel.tb_usuarios">
+        <MappingFragment StoreEntitySet="tb_usuarios">
+          <ScalarProperty Name="idusu" ColumnName="idusu" />
+          <ScalarProperty Name="nomusu" ColumnName="nomusu" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="tipusu" ColumnName="tipusu" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="direcenvio" ColumnName="direcenvio" />
+          <ScalarProperty Name="tarjeta" ColumnName="tarjeta" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Autogenera" FunctionName="FUNKOBDModel.Store.Autogenera" />
+    <EntitySetMapping Name="tb_pedido">
+      <EntityTypeMapping TypeName="FUNKOBDModel.tb_pedido">
+        <MappingFragment StoreEntitySet="tb_pedido">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="idusu" ColumnName="idusu" />
+          <ScalarProperty Name="fecpedido" ColumnName="fecpedido" />
+          <ScalarProperty Name="idpedido" ColumnName="idpedido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_detapedido">
+      <EntityTypeMapping TypeName="FUNKOBDModel.tb_detapedido">
+        <MappingFragment StoreEntitySet="tb_detapedido">
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="idprodu" ColumnName="idprodu" />
+          <ScalarProperty Name="idpedido" ColumnName="idpedido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
